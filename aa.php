@@ -1,6 +1,6 @@
 <?php require_once('inc/header.php'); ?>
 <?php
-if(isset($_GET['Converter'])){
+if(isset($_GET['Network'])){
 ?>
 <form action="" method="POST">
 <div class="row">
@@ -12,25 +12,25 @@ if(isset($_GET['Converter'])){
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
                         <li class="breadcrumb-item"><a href="#">Tools</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Youtube to Mp3</li>
+                        <li class="breadcrumb-item active" aria-current="page">DNS ZONE SCANNER</li>
                     </ol>
                 </nav>
                             </h4>
                             <center>
-                                <h1>Youtube to Mp3</h1>
+                                <h1>DNS ZONE SCANNER</h1>
                             </center>
                             <div class="col-sm-15">
-                                <h6>Masukan Domain Youtube</h6>
+                                <h6>Masukan Domain</h6>
                                 <div class="form-group position-relative has-icon-left">
-                                    <input type="url" name="url" class="form-control" placeholder="site.com">
+                                    <input type="text" name="site" class="form-control" placeholder="https://site.com">
                                     <div class="form-control-icon">
                                     <i class="fa-solid fa-link"></i>
                                     </div>
                                 </div>
                             </div>
-                            <center><button class="btn btn-outline-success" type="submit" name="submit">PING</button></center>
+                            <center><button class="btn btn-outline-success" type="submit" name="submit">SCAN</button></center>
                             <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
-                            <br><?= yt(); ?>
+                            <br><?= dns_zone(); ?>
                         </div>
                         </div>
                     </div>
@@ -43,9 +43,9 @@ if(isset($_GET['Converter'])){
     echo "
     <script>
     swal.fire('Anda tidak di izinkan untuk menambah apapun di parameter','','warning');
-    
+
     setInterval(() => {
-        window.location.href = 'yt-mp3?Converter';
+        window.location.href = 'dns_zone?Network';
     }, 2000);
     </script>
     ";
