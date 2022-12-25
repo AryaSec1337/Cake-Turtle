@@ -1,6 +1,6 @@
 <?php require_once('inc/header.php'); ?>
 <?php
-if(isset($_GET['Network'])){
+if(isset($_GET['Converter'])){
 ?>
 <form action="" method="POST">
 <div class="row">
@@ -12,17 +12,17 @@ if(isset($_GET['Network'])){
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
                         <li class="breadcrumb-item"><a href="#">Tools</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">PORT SCANNER</li>
+                        <li class="breadcrumb-item active" aria-current="page">Youtube to Mp3</li>
                     </ol>
                 </nav>
                             </h4>
                             <center>
-                                <h1>PORT SCANNER</h1>
+                                <h1>Youtube to Mp3</h1>
                             </center>
                             <div class="col-sm-15">
-                                <h6>Masukan Domain</h6>
+                                <h6>Masukan Domain Youtube</h6>
                                 <div class="form-group position-relative has-icon-left">
-                                    <input type="text" name="domain" class="form-control" placeholder="site.com">
+                                    <input type="url" name="url" class="form-control" placeholder="site.com">
                                     <div class="form-control-icon">
                                     <i class="fa-solid fa-link"></i>
                                     </div>
@@ -30,7 +30,7 @@ if(isset($_GET['Network'])){
                             </div>
                             <center><button class="btn btn-outline-success" type="submit" name="submit">PING</button></center>
                             <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
-                            <br><?= port_scanner(); ?>
+                            <br><?= yt(); ?>
                         </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ if(isset($_GET['Network'])){
     swal.fire('Anda tidak di izinkan untuk menambah apapun di parameter','','warning');
     
     setInterval(() => {
-        window.location.href = 'port?Network';
+        window.location.href = 'yt-mp3?Converter';
     }, 2000);
     </script>
     ";
